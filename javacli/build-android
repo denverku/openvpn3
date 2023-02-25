@@ -10,7 +10,6 @@ if [ -z "$O3" ]; then
 fi
 git clone https://github.com/OpenVPN/openvpn3.git core
 cd $O3/core
-. vars/android-sdk-path
 
 cd javacli
 git clean -q -fXd .
