@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # generate expire time in python: time.mktime((2012, 5, 1, 0, 0, 0, 0, 0, -1))
 #    -DAPP_EXPIRE_TIME=1364796000 \
+export O3=~/O3 && mkdir $O3
+cd $O3
 set -e
 if [ -z "$O3" ]; then
     echo O3 var must point to ovpn3 tree
