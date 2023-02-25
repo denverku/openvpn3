@@ -4,7 +4,6 @@
 set -e
 
 
-. vars/android-sdk-path
 cd javacli
 git clean -q -fXd .
 
