@@ -2,7 +2,13 @@
 # generate expire time in python: time.mktime((2012, 5, 1, 0, 0, 0, 0, 0, -1))
 #    -DAPP_EXPIRE_TIME=1364796000 \
 set -e
+if [ -z "$O3" ]; then
+    echo O3 var must point to ovpn3 tree
+    exit 1
+fi
 
+cd $O3/core
+. vars/android-sdk-path
 
 cd javacli
 git clean -q -fXd .
