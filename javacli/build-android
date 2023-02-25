@@ -37,12 +37,12 @@ TARGETS=${TARGETS:-android-a7a android-a8a android-x86}
 for TARGET in $TARGETS; do
 
 if [ "$DEBUG_BUILD" = "1" ]; then
-    . ../vars/vars-${TARGET}-dbg
+    
     vis1=""
     vis2=""
     opt2="$pkg_id_def $LIB_OPT_LEVEL"
 else
-    . ../vars/vars-${TARGET}
+    
     vis1="-fvisibility=hidden"
     vis2='-DSWIGEXPORT=__attribute__((visibility("default")))'
     opt2="$pkg_id_def -Os"
